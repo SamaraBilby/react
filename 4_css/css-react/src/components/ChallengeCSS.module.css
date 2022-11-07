@@ -1,0 +1,19 @@
+.marca{
+    background-color: blue;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.cor{
+    background-color: gold;
+    color: blueviolet;
+}
+
+.newCar{
+    background-color: brown;
+    text-transform: uppercase;
+}
+
+.km{
+    background-color: chocolate;
+}
