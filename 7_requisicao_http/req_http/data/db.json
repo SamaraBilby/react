@@ -49,6 +49,26 @@
       "name": "panela",
       "price": "15",
       "id": 10
+    },
+    {
+      "name": "caneta",
+      "price": "2",
+      "id": 11
+    },
+    {
+      "name": "caneta",
+      "price": "2",
+      "id": 12
+    },
+    {
+      "name": "lápis",
+      "price": "1.50",
+      "id": 13
+    },
+    {
+      "name": "lápis",
+      "price": "1.50",
+      "id": 14
     }
   ]
 }
