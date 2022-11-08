@@ -2,18 +2,28 @@ import './App.css';
 
 import {useState, useEffect} from "react";
 
+// 4 - custom hook
+
+import { useFetch } from './hooks/useFetch';
+
 const url = "http://localhost:3000/products";
 
 function App() {
 
   const[products, setproducts] = useState([]);
 
+  //4-custom hook
+
+  const {data: items, httpConfig, loading} =useFetch(url);
+
   const[name, setName] = useState("");
   const[price, setPrice] = useState("");
 
   //1--Resgatando dados da API
 
-  useEffect(() => {
+
+
+  /*useEffect(() => {
 
     async function fetchData() {
       const res = await fetch(url)
@@ -27,7 +37,7 @@ function App() {
     fetchData()
   }, [])
 
-  console.log(products)
+  console.log(products) */
 
   // 2- add produto
 
@@ -39,7 +49,7 @@ function App() {
       price,
     };
 
-    const res = await fetch (url, {
+  /*  const res = await fetch (url, {
       method: "POST",
       headers:{
         "Content-Type": "application/json"
@@ -48,17 +58,38 @@ function App() {
       body:JSON.stringify(product),
     });
 
-  }
+    // 3 - carregamento dinâmico
+
+    const addedProduct =await res.json()
+
+    setproducts((prevProducts)=> [...prevProducts, addedProduct])*/
+    
+    // 5 - refatorando POST
+    
+    httpConfig(product, "POST")
+    
+    setName("");
+    setPrice("")
+  };
+
+
+  
+
+
 
   return (
     <div className="App">
 
       <h4>Lista de produtos</h4>
-      <ul>
-        {products.map((product) => (
+
+        {/* 6-Loading */}
+
+        {loading && <p>Carregando dados...</p>}
+        {!loading && <ul>
+        {items && items.map((product) => (
           <li key={product.id}>{product.name} - R$ {product.price}</li>
         ))}
-      </ul>
+      </ul>}
       <div className="add-product">
         <form onSubmit={handleSubmit}>
           

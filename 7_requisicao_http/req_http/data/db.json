@@ -19,6 +19,36 @@
       "name": "Brinco",
       "price": "18",
       "id": 4
+    },
+    {
+      "name": "caderno",
+      "price": "130",
+      "id": 5
+    },
+    {
+      "name": "",
+      "price": "",
+      "id": 6
+    },
+    {
+      "name": "cadeira",
+      "price": "50",
+      "id": 7
+    },
+    {
+      "name": "mesa",
+      "price": "100",
+      "id": 8
+    },
+    {
+      "name": "mesa",
+      "price": "100",
+      "id": 9
+    },
+    {
+      "name": "panela",
+      "price": "15",
+      "id": 10
     }
   ]
 }
